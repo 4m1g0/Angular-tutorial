@@ -10,6 +10,7 @@ import { AuthorsComponent } from './authors/authors.component';
 import { CaseTitle2Pipe } from './case-title2.pipe';
 import { FavouriteComponent } from './favourite/favourite.component';
 import { PanelComponent } from './panel/panel.component';
+import { LikesComponent } from './likes/likes.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PanelComponent } from './panel/panel.component';
     TitleCasePipe,
     CaseTitle2Pipe,
     FavouriteComponent,
-    PanelComponent
+    PanelComponent,
+    LikesComponent
   ],
   imports: [
     BrowserModule,

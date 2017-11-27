@@ -20,6 +20,12 @@ export class AuthorsComponent {
     isFavourite: true
   }
 
+  tweet = {
+    body: "this is the tweet",
+    isLiked: false,
+    likesCount: 0
+  }
+
   constructor(service: AuthorsService) {
     this.authors = service.getAuthors();
    }
