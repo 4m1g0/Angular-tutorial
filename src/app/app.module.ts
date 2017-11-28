@@ -11,6 +11,7 @@ import { CaseTitle2Pipe } from './case-title2.pipe';
 import { FavouriteComponent } from './favourite/favourite.component';
 import { PanelComponent } from './panel/panel.component';
 import { LikesComponent } from './likes/likes.component';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LikesComponent } from './likes/likes.component';
     CaseTitle2Pipe,
     FavouriteComponent,
     PanelComponent,
-    LikesComponent
+    LikesComponent,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,
