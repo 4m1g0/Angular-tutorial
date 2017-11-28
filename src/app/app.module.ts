@@ -12,6 +12,8 @@ import { FavouriteComponent } from './favourite/favourite.component';
 import { PanelComponent } from './panel/panel.component';
 import { LikesComponent } from './likes/likes.component';
 import { ZippyComponent } from './zippy/zippy.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { CourseFormComponent } from './course-form/course-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ZippyComponent } from './zippy/zippy.component';
     FavouriteComponent,
     PanelComponent,
     LikesComponent,
-    ZippyComponent
+    ZippyComponent,
+    ContactFormComponent,
+    CourseFormComponent
   ],
   imports: [
     BrowserModule,
