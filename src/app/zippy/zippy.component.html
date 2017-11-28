@@ -9,5 +9,8 @@
       }">
     </span>
   </div>
-  <div *ngIf="isExpanded" class="zippy-body"><ng-content></ng-content></div>
+  <div *ngIf="isExpanded" class="zippy-body">
+    <ng-content select=".description"></ng-content>
+    <div class="divComponent"><ng-content select=".tags"></ng-content></div>
+  </div>
 </div>
