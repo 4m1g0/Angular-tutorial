@@ -1,6 +1,6 @@
 import { UsernameValidator } from './../common/validators/username-validator';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'contact-form',
@@ -17,7 +17,8 @@ export class ContactFormComponent {
     ],
     [UsernameValidator.isUnique,
     UsernameValidator.banned]), // As this is an async validator shold be in the thirth parameter
-    password: new FormControl('', Validators.required)
+    password: new FormControl('', Validators.required),
+    tags: new FormArray([])
   });
 
   // this property gives use a shotcut acces to the formControl
@@ -31,4 +32,12 @@ export class ContactFormComponent {
     this.form.setErrors({invalidLogin:true});
   }
 
+  addTag(control:HTMLInputElement){
+    this.tags.push(new FormControl(control.value));
+    control.value = '';
+  }
+
+  get tags() {
+    return this.form.get('tags') as FormArray;
+  }
 }

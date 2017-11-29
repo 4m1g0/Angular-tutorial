@@ -16,5 +16,12 @@
     <label for="password">Password</label>
     <input formControlName="password" type="text" id="password" class="form-control" />
   </div>
+  <div class="form-group">
+      <label for="tagsInput">Tags</label>
+      <input type="text" id="tagsInput" class="form-control" (keyup.enter)="addTag(tagInput)" #tagInput/>
+      <ul>
+        <li *ngFor="let tag of form.get('tags').controls">{{ tag.value }}</li>
+      </ul>
+    </div>
   <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Sign Up</button>
 </form>
